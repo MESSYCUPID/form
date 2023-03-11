@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>load page</title>
+        <STYLE>
+            body{
+                margin: 0%;
+                padding: 0%;
+                background: black;
+                font-family: montserrat;
+                color: antiquewhite;
+
+            }
+            .center{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+            .ring{
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                animation: ring 2s linear;
+                animation-iteration-count: infinite;
+            }
+            @keyframes ring{
+                0%{
+                    transform: rotate(0deg);
+                    box-shadow: 1px 4px 2px #fc0606;
+                }
+               500%{
+                    transform: rotate(180deg);
+                    box-shadow: 1px 4px 2px #e7e1e1ee;
+                }
+                100%{
+                    transform: rotate(360deg);
+                    box-shadow: 1px 4px 2px #eeff06;
+                }
+
+            }
+            .ring::before{
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                box-shadow: 0 0 5px rgba(red, green, blue, alpha);
+              border-radius: 50%;
+            }
+            span{
+                color: antiquewhite;
+                font-size: 20%;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                line-height: 300%;
+                animation: text 10s ease-in-out;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <div class="ring"></div>
+        </div>
+        <span>LOADING....</span>
+    </body>
+</html>
